@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cbchoice
+namespace CB_Choice
 {
     static class Program
     {

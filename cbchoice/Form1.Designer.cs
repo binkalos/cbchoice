@@ -1,4 +1,4 @@
-﻿namespace cbchoice
+﻿namespace CB_Choice
 {
     partial class Form1
     {
@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cblist = new System.Windows.Forms.ComboBox();
-            this.txtlist = new System.Windows.Forms.TextBox();
-            this.btnadd = new System.Windows.Forms.Button();
+            this.cbList = new System.Windows.Forms.ComboBox();
+            this.txtList = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cblist
+            // cbList
             // 
-            this.cblist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cblist.FormattingEnabled = true;
-            this.cblist.Location = new System.Drawing.Point(56, 30);
-            this.cblist.Name = "cblist";
-            this.cblist.Size = new System.Drawing.Size(121, 20);
-            this.cblist.TabIndex = 0;
+            this.cbList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbList.FormattingEnabled = true;
+            this.cbList.Location = new System.Drawing.Point(56, 30);
+            this.cbList.Name = "cbList";
+            this.cbList.Size = new System.Drawing.Size(121, 20);
+            this.cbList.TabIndex = 0;
+            this.cbList.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
-            // txtlist
+            // txtList
             // 
-            this.txtlist.Location = new System.Drawing.Point(58, 63);
-            this.txtlist.Name = "txtlist";
-            this.txtlist.Size = new System.Drawing.Size(118, 21);
-            this.txtlist.TabIndex = 1;
+            this.txtList.Location = new System.Drawing.Point(58, 63);
+            this.txtList.Name = "txtList";
+            this.txtList.Size = new System.Drawing.Size(118, 21);
+            this.txtList.TabIndex = 1;
+            this.txtList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtList_KeyPress);
             // 
-            // btnadd
+            // btnAdd
             // 
-            this.btnadd.Location = new System.Drawing.Point(58, 99);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(117, 41);
-            this.btnadd.TabIndex = 2;
-            this.btnadd.Text = "추가";
-            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(58, 99);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(117, 41);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lblResult
             // 
@@ -74,12 +77,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.txtlist);
-            this.Controls.Add(this.cblist);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtList);
+            this.Controls.Add(this.cbList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,9 +91,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cblist;
-        private System.Windows.Forms.TextBox txtlist;
-        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.ComboBox cbList;
+        private System.Windows.Forms.TextBox txtList;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblResult;
     }
 }
